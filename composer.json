@@ -6,7 +6,7 @@
     },
     "autoload": {
         "psr-0": {
-            "Dyatlov\\Expedia": "src/"
+            "Dyatlov\\Expedia": "/"
         }
     },
     "minimum-stability": "dev"
