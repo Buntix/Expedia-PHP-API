@@ -31,7 +31,7 @@ class Expedia
      *
      * @var int
      */
-    protected $minor_rev = 4;
+    protected $minor_rev = 28;
     /**
      * Returns data in other languages where available for Expedia Collect properties only.
      *
@@ -122,10 +122,20 @@ class Expedia
     {
         $this->protocol = strtolower($protocol);
     }
-
+    
+    /**
+     * Set the endpoint, use dev.api.ean.com for beta/development access.
+     * 
+     * @param string $endpoint
+     */
+    public function set_endpoint( $endpoint )
+    {
+        $this->hotel_api_url = $endpoint;
+    }
+    
     /**
      * Sets the minor revision used for processing requests and returning responses.
-     * Defaults to 4 (original release) if omitted.
+     * Defaults to 28 (latest as of Dec 2014), revisions 23 and below are now deprecated and will cease working Feb 2015.
      *
      * @param int $num
      */
